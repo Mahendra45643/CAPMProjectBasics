@@ -1,0 +1,17 @@
+
+GET http://localhost:4004/odata/v4/bookshop/Authors
+# @name BooksQuery
+
+# # Create a new Author
+POST http://localhost:4004/odata/v4/bookshop/Authors
+Content-Type: application/json
+
+{
+    "name": "PUSHPA"
+}
+
+# Extract the Author ID from the response
+# @author_ID = {{BooksQuery.response.body.value[0].ID}}
+
+# # DELETE Author by ID
+# DELETE http://localhost:4004/odata/v4/bookshop/Authors/{{{author_ID}}}
